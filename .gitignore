@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.coverage
+dist/
+build/
+*.egg-info/
+.DS_Store
+uv.lock
+
+# Local agent/session diagnostics
+.aap_*.txt
+.full_msg*.txt
+.ntfy_window.txt
+.peer_search.txt
+.tally_window.txt
+.tool_trace.txt
+.user_msg*.txt
+.claude/

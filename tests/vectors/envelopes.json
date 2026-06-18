@@ -1,0 +1,59 @@
+{
+  "vectors": [
+    {
+      "name": "agent-card-basic",
+      "private_seed_hex": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "public_key_b64url": "XM6q2cICwjbNjJdykKhE4_LwoVqbMYkiDb4PkSHrDNI",
+      "envelope_unsigned": {
+        "iat": "2026-05-19T12:00:00Z",
+        "iss": "did:web:chrisevans.id#agent",
+        "payload": {
+          "address": "chris^chrisevans.id",
+          "did": "did:web:chrisevans.id#agent",
+          "endpoints": [
+            {
+              "type": "didcomm",
+              "uri": "https://relay.example"
+            }
+          ],
+          "public_key": "XM6q2cICwjbNjJdykKhE4_LwoVqbMYkiDb4PkSHrDNI"
+        },
+        "payload_type": "aap.agent-card/v1",
+        "type": "aap.envelope/v1",
+        "v": 1
+      },
+      "canonical_bytes_hex": "7b22696174223a22323032362d30352d31395431323a30303a30305a222c22697373223a226469643a7765623a63687269736576616e732e6964236167656e74222c227061796c6f6164223a7b2261646472657373223a2263687269735e63687269736576616e732e6964222c22646964223a226469643a7765623a63687269736576616e732e6964236167656e74222c22656e64706f696e7473223a5b7b2274797065223a22646964636f6d6d222c22757269223a2268747470733a2f2f72656c61792e6578616d706c65227d5d2c227075626c69635f6b6579223a22584d367132634943776a624e6a4a64796b4b6845345f4c776f5671624d596b69446234506b534872444e49227d2c227061796c6f61645f74797065223a226161702e6167656e742d636172642f7631222c2274797065223a226161702e656e76656c6f70652f7631222c2276223a317d",
+      "signature_b64url": "QvZY6yPKSJML18rihNx1TtWaQbnBRgScgb1gwRF04LAsvbpNG-dxNFSsAyyeHQs08qv_edN1PBVCIrNqlPR2Cg",
+      "envelope_signed_json": "{\"iat\":\"2026-05-19T12:00:00Z\",\"iss\":\"did:web:chrisevans.id#agent\",\"payload\":{\"address\":\"chris^chrisevans.id\",\"did\":\"did:web:chrisevans.id#agent\",\"endpoints\":[{\"type\":\"didcomm\",\"uri\":\"https://relay.example\"}],\"public_key\":\"XM6q2cICwjbNjJdykKhE4_LwoVqbMYkiDb4PkSHrDNI\"},\"payload_type\":\"aap.agent-card/v1\",\"sig\":\"QvZY6yPKSJML18rihNx1TtWaQbnBRgScgb1gwRF04LAsvbpNG-dxNFSsAyyeHQs08qv_edN1PBVCIrNqlPR2Cg\",\"type\":\"aap.envelope/v1\",\"v\":1}"
+    },
+    {
+      "name": "relationship-token-two-party",
+      "private_seed_hex": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "public_key_b64url": "XM6q2cICwjbNjJdykKhE4_LwoVqbMYkiDb4PkSHrDNI",
+      "envelope_unsigned": {
+        "iat": "2026-05-19T12:00:00Z",
+        "iss": "did:web:chrisevans.id#agent",
+        "payload": {
+          "exp": "2026-08-19T12:00:00Z",
+          "iat": "2026-05-19T12:00:00Z",
+          "nonce": "nonce-abc-123",
+          "parties": [
+            "chris^chrisevans.id",
+            "james^bob.example"
+          ],
+          "purpose": "social-scheduling",
+          "scopes": [
+            "calendar.read",
+            "messages.write"
+          ]
+        },
+        "payload_type": "aap.relationship-token/v1",
+        "type": "aap.envelope/v1",
+        "v": 1
+      },
+      "canonical_bytes_hex": "7b22696174223a22323032362d30352d31395431323a30303a30305a222c22697373223a226469643a7765623a63687269736576616e732e6964236167656e74222c227061796c6f6164223a7b22657870223a22323032362d30382d31395431323a30303a30305a222c22696174223a22323032362d30352d31395431323a30303a30305a222c226e6f6e6365223a226e6f6e63652d6162632d313233222c2270617274696573223a5b2263687269735e63687269736576616e732e6964222c226a616d65735e626f622e6578616d706c65225d2c22707572706f7365223a22736f6369616c2d7363686564756c696e67222c2273636f706573223a5b2263616c656e6461722e72656164222c226d657373616765732e7772697465225d7d2c227061796c6f61645f74797065223a226161702e72656c6174696f6e736869702d746f6b656e2f7631222c2274797065223a226161702e656e76656c6f70652f7631222c2276223a317d",
+      "signature_b64url": "aKmfGzazl842BBRfhzul0W5pfGqCY8Y89ua3Z8865pQIO6_u-QpYOvZms3s4bDiSN6R4gIGTdTP9pk2cbEogCQ",
+      "envelope_signed_json": "{\"iat\":\"2026-05-19T12:00:00Z\",\"iss\":\"did:web:chrisevans.id#agent\",\"payload\":{\"exp\":\"2026-08-19T12:00:00Z\",\"iat\":\"2026-05-19T12:00:00Z\",\"nonce\":\"nonce-abc-123\",\"parties\":[\"chris^chrisevans.id\",\"james^bob.example\"],\"purpose\":\"social-scheduling\",\"scopes\":[\"calendar.read\",\"messages.write\"]},\"payload_type\":\"aap.relationship-token/v1\",\"sig\":\"aKmfGzazl842BBRfhzul0W5pfGqCY8Y89ua3Z8865pQIO6_u-QpYOvZms3s4bDiSN6R4gIGTdTP9pk2cbEogCQ\",\"type\":\"aap.envelope/v1\",\"v\":1}"
+    }
+  ]
+}
