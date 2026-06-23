@@ -39,6 +39,37 @@ def test_reject_empty_domain():
         Address.parse("chris^")
 
 
+def test_parse_user_input_expands_hosted_shorthand():
+    a = Address.parse_user_input("chris^")
+    assert a.localpart == "chris"
+    assert a.domain == "agentaddress.org"
+    assert str(a) == "chris^agentaddress.org"
+
+
+def test_parse_user_input_expands_case_normalized_shorthand():
+    a = Address.parse_user_input(" Chris+Bot^ ")
+    assert str(a) == "chris+bot^agentaddress.org"
+
+
+def test_parse_user_input_preserves_explicit_domain():
+    a = Address.parse_user_input("Chris^Example.COM")
+    assert str(a) == "chris^example.com"
+
+
+def test_parse_user_input_accepts_custom_default_domain():
+    a = Address.parse_user_input("chris^", default_domain="example.com")
+    assert str(a) == "chris^example.com"
+
+
+def test_parse_user_input_invalid_shorthand_still_uses_strict_validation():
+    with pytest.raises(ValueError, match="localpart cannot be empty"):
+        Address.parse_user_input("^")
+    with pytest.raises(ValueError, match="invalid characters"):
+        Address.parse_user_input("chris^^")
+    with pytest.raises(ValueError, match="invalid characters"):
+        Address.parse_user_input("bad name^")
+
+
 def test_reject_invalid_localpart_chars():
     with pytest.raises(ValueError, match="invalid characters"):
         Address.parse("chris!^chrisevans.id")
