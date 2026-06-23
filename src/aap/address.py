@@ -65,5 +65,24 @@ class Address:
             raise ValueError(f"domain contains invalid characters: {domain!r}")
         return cls(localpart=localpart, domain=domain)
 
+    @classmethod
+    def parse_user_input(
+        cls,
+        s: str,
+        *,
+        default_domain: str = "agentaddress.org",
+    ) -> "Address":
+        """Parse human/LLM-entered address text.
+
+        A trailing caret is shorthand for the hosted Agent Address namespace:
+        ``chris^`` expands to ``chris^agentaddress.org``. The expanded value is
+        then passed through strict parsing so protocol validation remains in one
+        place.
+        """
+        value = s.strip()
+        if value.endswith("^"):
+            value = f"{value}{default_domain}"
+        return cls.parse(value)
+
     def __str__(self) -> str:
         return f"{self.localpart}^{self.domain}"
