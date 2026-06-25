@@ -37,7 +37,7 @@ dev = [
 
 [project.urls]
 Homepage = "https://agentaddressprotocol.org"
-Source = "https://github.com/zazig-team/aap-python"
+Source = "https://github.com/agentaddress/aap-python"
 
 [tool.hatch.version]
 path = "src/aap/version.py"
