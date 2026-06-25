@@ -1,11 +1,11 @@
-# aap-python
+# agentaddress
 
 Reference Python implementation of the [Agent Address Protocol](https://agentaddressprotocol.org).
 
 ## Install
 
 ```bash
-pip install aap-python
+pip install agentaddress
 ```
 
 ## Quick example

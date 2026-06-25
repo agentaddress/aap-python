@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "aap-python"
+name = "agentaddress"
 dynamic = ["version"]
 description = "Reference Python implementation of the Agent Address Protocol (AAP)."
 readme = "README.md"

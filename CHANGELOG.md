@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### Packaging
+
+- Published to PyPI as `agentaddress` (the `aap-python` name was already taken).
+  Install with `pip install agentaddress`; the import package remains `aap`.
+
 ### Added
 
 - **End-to-end encrypted AAP envelopes.** `aap.encryption` implements RFC 9180
