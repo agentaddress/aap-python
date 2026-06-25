@@ -2,6 +2,10 @@
 
 Reference Python implementation of the [Agent Address Protocol](https://agentaddressprotocol.org).
 
+For a complete, runnable example of using this SDK inside a real agent host, see
+[aap-hermes](https://github.com/agentaddress/aap-hermes) — an open-source host
+implementation built on top of `agentaddress`.
+
 ## Install
 
 ```bash
@@ -115,9 +119,8 @@ and resolution primitives, the SDK now includes:
   layout.
 
 The earlier scope notes (v0.1-v0.6) describe how the codec grew. Host
-plugins like [aap-hermes](https://github.com/zazig-team/aap-hermes) and
-[aap-openclaw](https://github.com/zazig-team/aap-openclaw) build on top
-of this SDK to integrate with their respective agent runtimes.
+plugins like [aap-hermes](https://github.com/agentaddress/aap-hermes) build
+on top of this SDK to integrate with their respective agent runtimes.
 
 OPRF discovery, revocation, SD-JWT, and the contact-proof primitive come in
 subsequent releases.
