@@ -174,7 +174,7 @@ future.
 ## Verified Identity Badges
 
 Trusted verifier lists are signed `aap.trusted-verifiers/v1` envelopes issued by
-`aap-trust-root^agentaddressprotocol.org`. `TrustListCache` requires the
+`aap-trust-root^agentaddress.org`. `TrustListCache` requires the
 trust-root Ed25519 public key and rejects unsigned, wrongly signed, stale, or
 wrong-issuer lists. Each verifier entry carries the verifier's Ed25519
 `public_key`, so `VerifierPubkeyCache` resolves keys from the signed list rather

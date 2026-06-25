@@ -55,7 +55,7 @@ DEFAULT_TRUSTED_VERIFIERS_URL = (
     "https://api.agentaddress.org/.well-known/aap-trusted-verifiers"
 )
 TRUSTED_VERIFIERS_PAYLOAD_TYPE = "aap.trusted-verifiers/v1"
-TRUSTED_VERIFIERS_ISSUER = "aap-trust-root^agentaddressprotocol.org"
+TRUSTED_VERIFIERS_ISSUER = "aap-trust-root^agentaddress.org"
 TRUST_LIST_TTL_SECONDS = 24 * 60 * 60
 
 
