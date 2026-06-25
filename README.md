@@ -1,6 +1,6 @@
 # agentaddress
 
-Reference Python implementation of the [Agent Address Protocol](https://agentaddressprotocol.org).
+Reference Python implementation of the [Agent Address Protocol](https://agentaddress.org).
 
 For a complete, runnable example of using this SDK inside a real agent host, see
 [aap-hermes](https://github.com/agentaddress/aap-hermes) — an open-source host
