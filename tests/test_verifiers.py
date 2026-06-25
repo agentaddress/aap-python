@@ -32,7 +32,7 @@ _, _VERIFIER_PUBLIC = generate_keypair()
 _VERIFIER_PUBLIC_B64 = encode_b64url(_VERIFIER_PUBLIC)
 
 _DEFAULT_LIST_BODY = {
-    "publisher": "agentaddressprotocol.org",
+    "publisher": "agentaddress.org",
     "version": "2026-05-22",
     "verifiers": [
         {

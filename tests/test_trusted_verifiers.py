@@ -9,7 +9,7 @@ _PUBLIC_KEY = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 
 def test_parse_minimal_list():
     data = {
-        "publisher": "agentaddressprotocol.org",
+        "publisher": "agentaddress.org",
         "version": "2026-05-22",
         "verifiers": [
             {

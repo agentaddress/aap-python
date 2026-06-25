@@ -35,7 +35,7 @@ _TRUST_ROOT_SEED, _TRUST_ROOT_PUBLIC = generate_keypair()
 _TRUST_LIST_VERIFIER_SEED, _TRUST_LIST_VERIFIER_PUBLIC = generate_keypair()
 
 _TRUST_LIST_BODY = {
-    "publisher": "agentaddressprotocol.org",
+    "publisher": "agentaddress.org",
     "version": "2026-06-01",
     "verifiers": [
         {
