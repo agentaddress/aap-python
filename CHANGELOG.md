@@ -1,6 +1,18 @@
 # Changelog
 
-## Unreleased
+## v0.10.0 — 2026-06-25 — trust-root issuer domain
+
+### Changed
+
+- **Trust-root issuer is now `aap-trust-root^agentaddress.org`** (previously
+  `…^agentaddressprotocol.org`, which is not a real domain).
+  `TRUSTED_VERIFIERS_ISSUER` changed: the relay that signs the
+  trusted-verifiers list and the SDK clients that verify it must run this
+  version together. The Ed25519 signing key / pinned public key is unchanged —
+  only the identifier string. A client rejects a list signed under the old
+  issuer until both sides upgrade and the 24h trust-list cache expires.
+
+## v0.9.1 — 2026-06-25 — PyPI publish + encrypted envelopes
 
 ### Packaging
 
